@@ -1,0 +1,40 @@
+name: Automatic blog update 
+
+on:
+ 
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  
+  workflow_dispatch:
+
+
+jobs:
+  
+  build-deploy:
+  
+    runs-on: Ubuntu-20.04
+
+    
+    steps:
+      - uses: actions/checkout@master 
+        with:
+         fetch-depth: 2 
+
+      - name: Use Node.js 12.x  
+        uses: actions/setup-node@v1 
+        with:
+          node-version: '12.x'
+
+      - name: install and build 
+        run: npm install && npm run build
+        
+      - name: deploy 
+        uses: peaceiris/actions-gh-pages@v3 
+        with:
+          deploy_key: ${{ secrets.BLOG }} # key
+          external_repository: ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io 
+          publish_branch: master 
+          publish_dir: docs/.vuepress/dist 
