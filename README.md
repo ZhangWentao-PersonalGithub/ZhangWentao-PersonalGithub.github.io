@@ -18,15 +18,15 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@hexo
 
     - name: Build and Deploy
-      uses: ZhangWentao-PersonalGithub/hexo-deploy-github-pages-action@master
+      uses: ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io@hexo-deploy-github-pages-action
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         # The repository the action should deploy to.
-        PUBLISH_REPOSITORY: ZhangWentao-PersonalGithub/sitZhangWentao-PersonalGithub.github.io
+        PUBLISH_REPOSITORY: ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io
 
         # The branch the action should deploy to.
         BRANCH: hexo
