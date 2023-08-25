@@ -29,7 +29,7 @@ jobs:
         PUBLISH_REPOSITORY: ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io
 
         # The branch the action should deploy to.
-        BRANCH: hexo
+        BRANCH: blog
 ```
 
 if you want to make the workflow only triggers on push events to specific branches, you can like this: 
@@ -51,7 +51,7 @@ Below you'll find a description of what each option does.
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------- |---------| ------------- |
 | `PERSONAL_TOKEN`     | Depending on the repository permissions you may need to provide the action with a GitHub Personal Access Token in order to deploy. You can [learn more about how to generate one here](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). **This should be stored as a secret**. | `secrets` |         | **Yes** |
 | `PUBLISH_REPOSITORY` | The repository the action should deploy to. for example `ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io`                                                                                                                                                                                                                                                 | `env` |         | **Yes** |
-| `BRANCH`             | The branch the action should deploy to. for example `hexo`                                                                                                                                                                                                                                                              | `env` | `hexo` | **Yes** |
+| `BRANCH`             | The branch the action should deploy to. for example `blog`                                                                                                                                                                                                                                                              | `env` | `hexo` | **Yes** |
 | `PUBLISH_DIR`        | The folder the action should deploy. for example `./public`                                                                                                                                                                                                                                                               | `env` | `./public` | No |
 | `CNAME`              | The domain name of your GitHub Pages specified in a CNAME                                                                                                                                                                                                                                                                      | `env` |         | No |
 
