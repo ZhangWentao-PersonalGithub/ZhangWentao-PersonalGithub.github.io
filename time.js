@@ -21,7 +21,7 @@ hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
 minutes - 0-59之间的整数，做为date对象的分钟数
 seconds - 0-59之间的整数，做为date对象的秒数
 microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-var t1 = Date.UTC(2020,1,1,00,00,00)//在这里修改网站建设的时间
+var t1 = Date.UTC(2008,04,28,00,00,00)//在这里修改网站建设的时间
 var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 var diff = t2-t1
 var diffYears = Math.floor(diff/years)
