@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@hexo
 
       - name: Build and Deploy
         uses: ZhangWentao-PersonalGithub/ZhangWentao-PersonalGithub.github.io@hexo-deploy-github-pages-action # 使用专门部署 Hexo 到 GitHub pages 的 action
