@@ -13,7 +13,7 @@ fi
 if [ -n "${BRANCH}" ]; then
     TARGET_BRANCH=${BRANCH}
 else
-    TARGET_BRANCH="hexo"
+    TARGET_BRANCH="blog"
 fi
 
 if [ -n "${PUBLISH_DIR}" ]; then
