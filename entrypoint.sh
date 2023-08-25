@@ -13,7 +13,7 @@ fi
 if [ -n "${BRANCH}" ]; then
     TARGET_BRANCH=${BRANCH}
 else
-    TARGET_BRANCH="gh-pages"
+    TARGET_BRANCH="hexo"
 fi
 
 if [ -n "${PUBLISH_DIR}" ]; then
